@@ -33,15 +33,15 @@ export default function Chats() {
         )}
       </div>
 
-      <div className="chat-area flex items-center justify-center">
+      <div className="chat-area">
         <a
           href="https://bollemsimhadri.app.n8n.cloud/webhook/c4b58d85-6bd8-4b04-b599-c5d55308f721/chat"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center text-blue-600 hover:text-blue-800 transition"
+          className="icon flex flex-col items-center text-blue-600 hover:text-blue-800 transition"
         >
-          <FaRobot size={80} />   
-          <span className="mt-2 text-lg font-semibold">Chatbot</span>
+          <FaRobot size={120} />   
+          <span className="span">Chatbot here</span>
         </a>
       </div>
     </div>
