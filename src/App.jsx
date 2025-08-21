@@ -15,7 +15,8 @@ export default function App() {
         <Route path="/chats" element={<Chats />} />
       </Route>
 
-      <Route path="*" element={<Navigate to="/chats" replace />} />
+      {/* Catch-all should go to sign-in, NOT chats */}
+      <Route path="*" element={<Navigate to="/sign-in" replace />} />
     </Routes>
   )
 }
