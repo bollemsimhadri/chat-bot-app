@@ -40,12 +40,14 @@ export default function Chats() {
             <p className='para-1'>Loading chat...</p>
           </div>
         )}
+
         <iframe
-          src="/n8n-chat"
+          src="https://bollemsimhadri.app.n8n.cloud/webhook/c4b58d85-6bd8-4b04-b599-c5d55308f721/chat"
           title="AI Chatbot"
           style={{ width: "100%", height: "100%", border: "none" }}
           onLoad={() => setLoading(false)}
         />
+
       </div>
     </div>
   )
