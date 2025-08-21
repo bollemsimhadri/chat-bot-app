@@ -1,11 +1,10 @@
 import { useUserData, useSignOut } from '@nhost/react'
-import { useState } from 'react'
+import { FaRobot } from 'react-icons/fa'   // ✅ React Icon
 import './index.css'
 
 export default function Chats() {
   const user = useUserData()
   const { signOut } = useSignOut()
-  const [loading, setLoading] = useState(true)
 
   if (!user) {
     return (
@@ -33,21 +32,17 @@ export default function Chats() {
           </div>
         )}
       </div>
-      <div className="chat-area" style={{ position: "relative" }}>
-        {loading && (
-          <div className="loader-overlay">
-            <div className="spinner"></div>
-            <p className='para-1'>Loading chat...</p>
-          </div>
-        )}
 
-        <iframe
-          src="https://bollemsimhadri.app.n8n.cloud/webhook/c4b58d85-6bd8-4b04-b599-c5d55308f721/chat"
-          title="AI Chatbot"
-          style={{ width: "100%", height: "100%", border: "none" }}
-          onLoad={() => setLoading(false)}
-        />
-
+      <div className="chat-area flex items-center justify-center">
+        <a
+          href="https://bollemsimhadri.app.n8n.cloud/webhook/c4b58d85-6bd8-4b04-b599-c5d55308f721/chat"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center text-blue-600 hover:text-blue-800 transition"
+        >
+          <FaRobot size={80} />   
+          <span className="mt-2 text-lg font-semibold">Chatbot</span>
+        </a>
       </div>
     </div>
   )
